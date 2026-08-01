@@ -71,6 +71,8 @@ int main(int argc, char const *argv[])
     vec.push_back(45);
     cout << "Size after pushback() = "<<vec.size()<< endl;
 
+    cout << "Capacity : " << vec.capacity()<<endl ;
+
     vec.pop_back(); //45 by default pop hoga;
 
     cout << "Size after popback() = "<<vec.size()<< endl;
