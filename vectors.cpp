@@ -71,7 +71,7 @@ int main(int argc, char const *argv[])
     vec.push_back(45);
     cout << "Size after pushback() = "<<vec.size()<< endl;
 
-    cout << "Capacity : " << vec.capacity()<<endl ;
+    cout << "Capacity : " << vec.capacity()<<endl ;//Capacity doubles ,, size stays the same...
 
     vec.pop_back(); //45 by default pop hoga;
 
