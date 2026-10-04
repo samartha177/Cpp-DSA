@@ -89,24 +89,45 @@
 //     }
 //     return 0;
 // }
-#include <iostream>
-#include <vector>
+////Max subarray sum bruteforce:
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> vec = {3, -4, 5, 4, -1, 7, -8};
+
+//     int maxsum = INT16_MIN;
+//     for (int st = 0; st < vec.size(); st++)
+//     {
+//         int currsum = 0;
+//         for (int end = st; end < vec.size(); end++)
+//         {
+//             currsum += vec[end];
+//             maxsum = max(currsum, maxsum);
+//         }
+//     }
+//     cout << "The maximum subarray sum is: " << maxsum;
+//     return 0;
+// }
+////By kadane's algo:
+#include<iostream>
+#include<vector>
 using namespace std;
 
-int main(int argc, char const *argv[])
-{
-    vector<int> vec = {3, -4, 5, 4, -1, 7, -8};
-
-    int maxsum = INT16_MIN;
-    for (int st = 0; st < vec.size(); st++)
-    {
-        int currsum = 0;
-        for (int end = st; end < vec.size(); end++)
-        {
-            currsum += vec[end];
-            maxsum = max(currsum, maxsum);
+int main(){
+    int currsum=0,maxSum=INT16_MIN;
+    vector<int>vec = {3,-4,5,4,-1,7,-8};
+    for(int val: vec){
+        currsum+=val;
+        maxSum=max(currsum,maxSum);
+        if(currsum<0){
+            currsum=0;
         }
     }
-    cout << "The maximum subarray sum is: " << maxsum;
+    cout<< "The max subarray sum is: "<<maxSum ;
     return 0;
+
 }
+
