@@ -89,25 +89,24 @@
 //     }
 //     return 0;
 // }
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    vector <int>vec = {3,-4,5,4,-1,7,-8};
+    vector<int> vec = {3, -4, 5, 4, -1, 7, -8};
 
     int maxsum = INT16_MIN;
-    for (int st=0;st<vec.size();st++){
-        int currsum=0;
-        for(int end=st;end<vec.size();end++){
-            currsum+=vec[end]; 
-            maxsum = max(currsum,maxsum);
-
-
+    for (int st = 0; st < vec.size(); st++)
+    {
+        int currsum = 0;
+        for (int end = st; end < vec.size(); end++)
+        {
+            currsum += vec[end];
+            maxsum = max(currsum, maxsum);
         }
     }
-    cout<<"The maximum subarray sum is: "<<maxsum;
+    cout << "The maximum subarray sum is: " << maxsum;
     return 0;
 }
-
